@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@function rem($size) {
+  @return $size / 16px * 1rem;
+}
+
+.none {
+  display: none;
+}
+
+$c1: rgb(95, 95, 95);
+
+.center {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 15px;
+}

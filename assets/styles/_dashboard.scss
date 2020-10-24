@@ -1,0 +1,41 @@
+.page-dashboard {
+  body {
+    display: block;
+  }
+  section {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 25px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+header {
+  width: 100%;
+  background-color: rgb(56, 55, 55);
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  .menu {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 15px;
+
+    &__lista {
+      list-style: none;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+
+      &--link {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

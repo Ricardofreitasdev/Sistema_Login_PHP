@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://localhost/projetos/sistema-login/assets/styles/style.css"
+    />
+  </head>
+  <body>
+    <div class="box">
+      {% if email %}
+      <p>você já esta logado com o e-mail: {{ email }}</p>
+      <a href="http://localhost/projetos/sistema-login/dashboard"
+        >Acessar o dashboard</a
+      >
+      {% else %}
+      <h2>Faça seu login</h2>
+      <form
+        class="box__form"
+        action="http://localhost/projetos/sistema-login/login/check"
+        method="post"
+      >
+        <label for="email">seu e-mail</label>
+        <input
+          class="box__form--input"
+          type="email"
+          name="email"
+          placeholder="seu@email.com"
+          id="email"
+        />
+        <label for="senha">sua senha</label>
+        <input
+          class="box__form--input"
+          type="password"
+          name="senha"
+          placeholder="sua senha"
+          id="senha"
+        />
+        <button class="box__form--btn">Login</button>
+        <span class="box__form--alert"></span>
+        {% if error != '' %}
+        <span class="box__form--error">{{error.msg}}</span>
+        {% endif %}
+      </form>
+      {% endif %}
+    </div>
+    <script src="http://localhost/projetos/sistema-login/assets/script/validaCaps.js"></script>
+  </body>
+</html>
